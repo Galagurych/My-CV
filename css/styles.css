@@ -18,10 +18,38 @@ h1 {
   position: 
 }
 
-.contacts a{
-  display: block;
-}
+
 
 .contacts {
   font-size: 20px;
+  background: linear-gradient(45deg, rgba(12,180,247,1) 1%,rgba(249,49,9,1) 99%); 
 }
+
+
+a {
+  position: relative;
+  color: #1717E6; /*задаём цвет ссылки*/
+  cursor: pointer;
+  line-height: 1; /*задаём высоту строки*/
+  text-decoration: none; /*убираем подчёркивание*/
+
+}
+a:after {
+  display: block;
+  position: absolute;
+  left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+  width: 0;/*задаём длинну линии до наведения курсора*/
+  height: 2px; /*задаём ширину линии*/
+  background-color: #000000; /*задаём цвет линии*/
+  content: "";
+  transition: width 0.9s ease-out; /*задаём время анимации*/
+
+}
+
+a:hover:after,
+a:focus:after {
+  width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+  content: "Hello";
+}
+
+ 
