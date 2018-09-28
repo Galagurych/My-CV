@@ -17,3 +17,11 @@ p {
 h1 {
   position: 
 }
+
+.contacts a{
+  display: block;
+}
+
+.contacts {
+  font-size: 20px;
+}
